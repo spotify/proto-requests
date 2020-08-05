@@ -1,7 +1,7 @@
 {
-  "name": "@spotify-internal/proto-request",
+  "name": "proto-requests",
   "version": "0.0.0-development",
-  "description": "A utility for parsing protobuf files and building fetch request clients",
+  "description": "A utility for parsing protobuf files and building fetch / request clients",
   "main": "src/index.ts",
   "files": [
     "dist"
@@ -40,7 +40,6 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@spotify-internal/web-scripts": "^2.1.0",
     "cz-conventional-changelog": "^3.0.2",
     "raf": "^3.4.1",
     "rimraf": "^3.0.0"
@@ -51,7 +50,6 @@
     }
   },
   "dependencies": {
-    "@spotify-internal/adstudio-webgate-fetch": "^1.4.2",
     "@types/lodash": "^4.14.141",
     "@types/protobufjs": "^6.0.0",
     "babel-runtime": "^6.26.0",
