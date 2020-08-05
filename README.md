@@ -2,7 +2,7 @@
 
 `proto-request` uses [protobuf.js](https://github.com/protobufjs/protobuf.js) as well as some of it's own code generation to help your front end repository consume .proto files and build clients / request builders to make requests to them. It supports typescript declarations so that you can get code completion going!
 
-The ultimate goal is for `proto-request` to have many different clients, each reaching out to a different form of endpoint. For now we have started by building the `WebgateClient`.
+The ultimate goal is for `proto-request` to have many different clients, each reaching out to a different form of endpoint. For now we have started by building the `HttpServiceClient`.
 
 ## Creating a compiled file using the protobufjs cli
 
@@ -36,19 +36,17 @@ We can also generate models that are optimized for the front end and are broken 
 
 You can see `/test/generateModels.ts` for an example of how to generate the SplitModels. You can run the file to see the output in the `/generated` folder.
 
-## WebgateClient
+## HttpServiceClient
 
-The last step is to generate a client to be able to make calls to a given service based on the .proto file. For the webgate client you will use the `src/WebgateClient/index.ts` file as your utility.
+The last step is to generate a client to be able to make calls to a given service based on the .proto file. For the http service client you will use the `src/HttpServiceClient/index.ts` file as your utility.
 
-You can use the `/test/generateWebgateClient.ts` script as an example of how to do this.
+You can use the `/test/generateHttpServiceClient.ts` script as an example of how to do this.
 
 Once you have generated the client you can create typescript declarations by running:
 
 `pbts -o generated/compiledClient.d.ts generated/compiledClient.js`
 
 The next thing to do is to copy the generated client and builders over to your project and use them!
-
-Note: The generated webgate client expects that you will have `@spotify-internal/adstudio-webgate-fetch` installed in your project.
 
 ## Generate Models Locally
 
