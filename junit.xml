@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" time="3.521">
-  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2020-08-05T15:29:03" time="2.589" tests="2">
+<testsuites name="jest tests" tests="3" failures="0" time="3.305">
+  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2020-08-05T17:21:18" time="2.836" tests="2">
     <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.005">
     </testcase>
-    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0.001">
+    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2020-08-05T15:29:03" time="2.603" tests="1">
+  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2020-08-05T17:21:18" time="2.836" tests="1">
     <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.004">
     </testcase>
   </testsuite>

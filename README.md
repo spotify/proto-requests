@@ -2,7 +2,7 @@
 
 `proto-request` uses [protobuf.js](https://github.com/protobufjs/protobuf.js) as well as some of it's own code generation to help your front end repository consume .proto files and build clients / request builders to make requests to them. It supports typescript declarations so that you can get code completion going!
 
-The ultimate goal is for `proto-request` to have many different clients, each reaching out to a different form of endpoint. For now we have started by building the `HttpServiceClient`.
+We have provided the `HttpServiceClient` and `SplitModels` to help you generate clients.  However you are also free to fork this repository and build any code generator you like using the framework we have provided.
 
 ## Creating a compiled file using the protobufjs cli
 
