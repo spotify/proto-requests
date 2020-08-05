@@ -1,0 +1,25 @@
+name: Frontend CI
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
+
+    steps:
+      - uses: node:14.7.0-alpine3.12
+      - name: fetch branch master
+        run: git fetch origin master
+      - name: npm install
+        run: npm install
+      - name: run tests
+        run: npm run test
