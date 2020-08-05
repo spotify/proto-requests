@@ -16,10 +16,12 @@ jobs:
       NODE_OPTIONS: --max-old-space-size=4096
 
     steps:
-      - uses: node:14.7.0-alpine3.12
-      - name: fetch branch master
-        run: git fetch origin master
-      - name: npm install
-        run: npm install
-      - name: run tests
-        run: npm run test
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run test
+        env:
+          CI: true
