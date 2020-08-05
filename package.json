@@ -1,0 +1,65 @@
+{
+  "name": "@spotify-internal/proto-request",
+  "version": "0.0.0-development",
+  "description": "A utility for parsing protobuf files and building fetch request clients",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start:debug": "node --inspect test-dist/index.js --runInBand",
+    "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**",
+    "build:testclient": "babel test -x '.ts' --source-maps --out-dir test-dist --ignore __mocks__,__tests__",
+    "build:all": "npm run build; npm run build:testclient",
+    "compilets": "node dist/scripts/compilets.js",
+    "compilets:debug": "node --inspect-brk=9229 dist/scripts/compilets.js",
+    "lint": "npm run lint:js",
+    "lint:js": "echo \"linter disabled\"",
+    "test": "npm run build:all; node node_modules/.bin/jest --config ./jest.config.js ",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --config ./jest.config.js --runInBand",
+    "test:generate:models:debug": "node --inspect-brk=9229 test-dist/generateModels.js --runInBand",
+    "test:generate:models": "npm run build:all; node test-dist/generateModels.js",
+    "test:generate:client": "npm run build:all; node test-dist/generateHttpServiceClient.js",
+    "release": "web-scripts release",
+    "commit": "web-scripts commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ghe.spotify.net:kgould/proto-request.git"
+  },
+  "keywords": [
+    "protobuf",
+    "fetch",
+    "request"
+  ],
+  "author": "Keith Gould",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@spotify-internal/web-scripts": "^2.1.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "raf": "^3.4.1",
+    "rimraf": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@spotify-internal/adstudio-webgate-fetch": "^1.4.2",
+    "@types/lodash": "^4.14.141",
+    "@types/protobufjs": "^6.0.0",
+    "babel-runtime": "^6.26.0",
+    "fetch-headers": "^2.0.0",
+    "global": "^4.4.0",
+    "google-proto-files": "^1.1.0",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0",
+    "protobufjs": "^6.8.8"
+  }
+}

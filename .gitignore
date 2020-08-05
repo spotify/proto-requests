@@ -1,0 +1,10 @@
+.idea/
+.DS_Store
+node_modules/
+testproto/
+dist/
+generated/
+test-dist/
+test/config.ts
+.prettierrc.js
+.vscode/

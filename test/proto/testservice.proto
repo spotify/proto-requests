@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package com.test.testservice;
+
+import ""
+import "google/protobuf/empty.proto";
+
+message TestRequest {
+  message InnerThingy {
+    string id = 1;
+    string name = 2;
+
+    enum OhHeck {
+        OH = 0;
+        HECK = 1;
+    }
+
+    message InnerInnerDoodly {
+        string id = 1;
+        string fizzzlyy = 2;
+
+        enum WellDang {
+            WELL = 0;
+            DANG = 1;
+        }
+    }
+  }
+
+  enum FlooFlimFlam {
+      FLOO = 0;
+      FLIM = 1;
+      FLAM = 2;
+  }
+
+  string id = 1;
+  string adAccountId = 2;
+  InnerThingy thingy = 3;
+  FlooFlimFlam floopy = 4;
+}
+
+service TestService {
+  option (com.spotify.ads.protobuf.serviceDefaults) = {
+        version: 1
+        serviceNames: "testservice"
+        serviceNames: "testservice-sandbox"
+    };
+
+  rpc doSomething (google.protobuf.Empty) returns (google.protobuf.Empty);
+}

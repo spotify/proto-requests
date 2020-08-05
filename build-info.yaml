@@ -1,0 +1,8 @@
+version: 2
+
+template:
+  type: webLibrary
+  webLibrary:
+    publishStrategy: semantic-release
+    gcpProject: ad-selfserve
+    imageName: proto-request
