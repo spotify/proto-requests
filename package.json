@@ -41,6 +41,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
     "cz-conventional-changelog": "^3.0.2",
+    "jest": "^26.2.2",
     "raf": "^3.4.1",
     "rimraf": "^3.0.0"
   },
