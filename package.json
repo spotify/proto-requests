@@ -40,10 +40,14 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^26.0.8",
     "cz-conventional-changelog": "^3.0.2",
     "jest": "^26.2.2",
+    "jest-junit": "^11.1.0",
     "raf": "^3.4.1",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
   },
   "config": {
     "commitizen": {
