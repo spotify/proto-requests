@@ -9,7 +9,7 @@
   "scripts": {
     "start:debug": "node --inspect test-dist/index.js --runInBand",
     "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**",
-    "build:testclient": "babel test -x '.ts' --source-maps --out-dir test-dist --ignore __mocks__,__tests__",
+    "build:testclient": "rimraf test-dist/*; babel test -x '.ts' --source-maps --out-dir test-dist --ignore __mocks__,__tests__",
     "build:all": "npm run build; npm run build:testclient",
     "compilets": "node test-dist/generateDts.js",
     "compilets:debug": "node --inspect-brk=9229 test-dist/generateDts.js",

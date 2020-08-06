@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { config as defaultConfig } from '../../../test/config';
+import { config as defaultConfig } from '../../../test/testconfig';
 import { ClientConfig } from '../../ClientConfig';
 import SplitModels from '../index';
 

@@ -1,5 +1,5 @@
 const { writeOutput } = require('../dist/utils/fileUtils');
-const { config } = require('../test-dist/config');
+const { config } = require('../test-dist/testconfig');
 const { ClientConfig } = require('../dist/ClientConfig');
 const protoRequest = require('../dist').default;
 
