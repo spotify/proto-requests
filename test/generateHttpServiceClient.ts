@@ -1,5 +1,5 @@
 const { writeOutput } = require('../dist/utils/fileUtils');
-const { config } = require('../test-dist/config');
+const { config } = require('../test-dist/testconfig');
 const { ClientConfig } = require('../dist/ClientConfig');
 const protoRequest = require('../dist').default;
 
@@ -10,7 +10,7 @@ clientConfig.longs = String;
 clientConfig.enums = String;
 clientConfig.defaults = true;
 clientConfig.oneofs = true;
-clientConfig.rootLocation = '/Users/keithgould/src/proto-request/testproto/';
+clientConfig.rootLocation = config.rootLocation;
 
 const generateCustomClasses = (fileLocation) => {
     console.log('writing custom classes for http service client');
