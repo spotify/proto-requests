@@ -10,7 +10,7 @@ clientConfig.longs = String;
 clientConfig.enums = String;
 clientConfig.defaults = true;
 clientConfig.oneofs = true;
-clientConfig.rootLocation = '/Users/keithgould/src/proto-request/testproto/';
+clientConfig.rootLocation = config.rootLocation;
 
 const generateCustomClasses = (fileLocation) => {
     console.log('writing custom classes for http service client');

@@ -1,6 +1,6 @@
 const path = require('path');
 const { trimEnd } = require('lodash');
-const generateDts = require('../generateDts').default;
+const generateDts = require('../dist/generateDts').default;
 
 if (!process.argv[2]) {
   console.error(
@@ -15,7 +15,7 @@ if (path.isAbsolute(process.argv[2])) {
 } else {
   targetDirectory = path.join(
     __dirname,
-    '../../',
+    '../',
     trimEnd(process.argv[2], '/'),
   );
 }
