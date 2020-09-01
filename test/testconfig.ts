@@ -13,8 +13,8 @@ testConfig.rootLocation = "/Users/keithgould/src/proto-requests/proto/";
 testConfig.protoFiles = [
     'com/test/testservice.proto',
 ];
-testConfig.webgateHost = "https://exp.wg.spotify.com";
-testConfig.webgateBaseUrl = "adstudio-bff/proto";
+testConfig.webgateHost = "https://www.testservice.com";
+testConfig.webgateBaseUrl = "testservice/proto";
 testConfig.webgateVersion = "v1";
 
 export const config = testConfig;

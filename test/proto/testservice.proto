@@ -39,7 +39,7 @@ message TestRequest {
 }
 
 service TestService {
-  option (com.spotify.ads.protobuf.serviceDefaults) = {
+  option (com.org.testservice.protobuf.serviceDefaults) = {
         version: 1
         serviceNames: "testservice"
         serviceNames: "testservice-sandbox"

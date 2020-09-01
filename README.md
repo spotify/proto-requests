@@ -105,7 +105,7 @@ Specify the locations of the protofiles in `test/config.ts`:
 
 ```
 testConfig.protoFiles = [
-  "com/spotify/adstudiobff/draftservice.proto"
+  "com/org/testservice/testservice.proto"
 ];
 ```
 
@@ -116,3 +116,7 @@ Run `npm run test:generate:client` to generate client classes.
 
 `npm run build:all`
 `npm run compilets <dir-to-generate-ts-for>`
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+
+[code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md

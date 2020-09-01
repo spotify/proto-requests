@@ -1,4 +1,4 @@
-const baseConfig = require('@spotify-internal/web-scripts/config/eslintrc.js');
+const baseConfig = require('@spotify/web-scripts/config/eslintrc.js');
 
 module.exports = {
   ...baseConfig,
