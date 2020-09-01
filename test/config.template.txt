@@ -1,0 +1,20 @@
+const { Config } = require("../dist/Config");
+
+const testConfig = new Config();
+
+testConfig.jsFile = "generated/compiled.js";
+testConfig.tsFile = "generated/compiled.d.ts";
+testConfig.libraryTarget = "esModule";
+testConfig.buildersOutputFile = "generated/compiledWithBuilders.js";
+testConfig.clientOutputDir = "generated/";
+testConfig.modelsOutputFile = "generated/models.js";
+testConfig.modelsOutputDir = "generated/";
+testConfig.rootLocation = "<path_to_project>/proto-request/testproto/";
+testConfig.protoFiles = [
+  "<example/package/service.proto>"
+];
+testConfig.webgateHost = "https://www.testservice.com";
+testConfig.webgateBaseUrl = "testservice/proto";
+testConfig.webgateVersion = "v1";
+
+export const config = testConfig;

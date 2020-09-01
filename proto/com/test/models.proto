@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package com.test;
+
+import "com/test/unimportedmodels.proto";
+
+message Model {
+    string id = 1;
+    string name = 2;
+    InnerModel innerModel = 3;
+    UnimportedModel unimportedModel = 4;
+
+    message InnerModel {
+        string id = 1;
+        int32 count = 2;
+        InnerEnum innerEnum = 3;
+
+        enum InnerEnum {
+            SHOO = 0;
+            SHWA = 1;
+            SHWE = 2;
+            SHIM = 3;
+        }
+    }
+}
+
+message Result {
+    enum ResultStatus {
+        SUCCESS = 0;
+        FAILURE = 1;
+        UNKNOWN = 2;
+    }
+    string id = 1;
+    string name = 2;
+    ResultStatus status = 3;
+}

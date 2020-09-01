@@ -1,0 +1,12 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es6",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "lib": ["DOM"],
+    "esModuleInterop": true
+  },
+  "sourceMap": true
+}

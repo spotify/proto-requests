@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.test;
+
+message UnimportedModel {
+    string id = 1;
+    string something = 2;
+    int32 numberrr = 3;
+}
