@@ -33,7 +33,7 @@ message TestRequest {
   }
 
   string id = 1;
-  string adAccountId = 2;
+  string accountId = 2;
   InnerThingy thingy = 3;
   FlooFlimFlam floopy = 4;
 }
