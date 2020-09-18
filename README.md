@@ -12,7 +12,7 @@ If you've never used a generated client to interact with your backend before, it
 
 Here is an example of what making a fetch call might look like WITHOUT a generated client:
 
-```
+```js
 export async function getTodo(
   userId: string,
   todoId: string,
@@ -31,7 +31,7 @@ export async function getTodo(
 
 And this is what it could look like with our generated client:
 
-```
+```js
 const config = getClientConfig();
 const client = new TodoService(globalProtoFetch, config);
 
@@ -95,7 +95,7 @@ If you just want to sample what this package is like without fully integrating i
 
 Add a directory `testproto/` along with your test proto files. Add the file `test/config.ts` with the contents of [`test/config.template.txt`](). In `test/config.ts`, set `clientConfig.rootLocation` to the location of the `testproto` directory:
 
-```
+```js
 ...
 testConfig.rootLocation = "/Users/<your-username>/projects/proto-request/testproto/";
 ...
@@ -103,7 +103,7 @@ testConfig.rootLocation = "/Users/<your-username>/projects/proto-request/testpro
 
 Specify the locations of the protofiles in `test/config.ts`:
 
-```
+```js
 testConfig.protoFiles = [
   "com/org/testservice/testservice.proto"
 ];
