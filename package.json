@@ -23,9 +23,6 @@
     "release": "web-scripts release",
     "commit": "web-scripts commit"
   },
-  "release": {
-    "dryRun": true
-  },
   "husky": {
     "hooks": {
       "commit-msg": "web-scripts commitmsg"
