@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Method, Root, Service, Type, Enum } from 'protobufjs';
 import { Console } from '../types/console';
 import { upperFirst, startsWith } from 'lodash';
@@ -19,7 +20,7 @@ import {
 import { protoPrimitiveTypesToTsTypes, typeDefaults } from '../utils/types';
 import { WriteFunction, writeOutput, writeOutputSync } from '../utils/fileUtils';
 import { ClientConfig } from '../ClientConfig';
-import polyfills from './polyfills';
+import polyfills from './polyfills/index';
 import { fileHeader } from '../utils/fileHeader';
 import {
   setupModule,

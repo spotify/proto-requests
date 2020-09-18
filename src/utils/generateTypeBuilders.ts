@@ -1,12 +1,5 @@
-import {
-  Enum,
-  Field,
-  Method,
-  Namespace,
-  Root,
-  Service,
-  Type,
-} from 'protobufjs';
+// @ts-ignore
+import { Enum, Field, Method, Namespace, Root, Service, Type, } from 'protobufjs';
 import { upperFirst } from 'lodash';
 import {
   getTabsForDepth as gtd,

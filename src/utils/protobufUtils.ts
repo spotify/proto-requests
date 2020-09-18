@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Method, Service, Type, Root, Enum } from 'protobufjs';
 
 export function traverseTypes(current, fn) {
