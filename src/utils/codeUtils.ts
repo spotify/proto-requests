@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Enum, Field, Method, Namespace, Root, Service, Type } from 'protobufjs';
 import { memoize, trimStart, flatten } from 'lodash';
 import {snakeToCamel} from "./caseUtils";

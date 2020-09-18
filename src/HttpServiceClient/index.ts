@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Method, Root, Service, Type} from 'protobufjs';
 import { ClientConfig } from '../ClientConfig';
 import { readFileSync } from 'fs';

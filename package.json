@@ -26,6 +26,11 @@
   "release": {
     "dryRun": true
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "web-scripts commitmsg"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:spotify/proto-requests.git"
@@ -46,6 +51,7 @@
     "@spotify/web-scripts": "^8.0.2",
     "@types/jest": "^26.0.8",
     "cz-conventional-changelog": "^3.0.2",
+    "husky": "^4.3.0",
     "jest": "^26.2.2",
     "jest-junit": "^11.1.0",
     "raf": "^3.4.1",
