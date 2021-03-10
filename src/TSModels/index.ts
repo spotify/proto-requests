@@ -131,7 +131,7 @@ ${depth === 0 ? '\n': ''}`;
     const content = generateAnnotatedNamespaces(options, this.root, '$root', 0, nodeHandlers);
 
     const modelFile =
-        options.modelsOutputDir + 'models.ts';
+        options.modelsOutputDir + 'models.d.ts';
 
     this.writeFn(modelFile, content);
   };

@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { config as defaultConfig } from '../../../test/testconfig';
 import { ClientConfig } from '../../ClientConfig';
-import SplitModels from '../index';
+import TSModels from '../index';
 
 let config;
 try {
@@ -11,7 +11,7 @@ try {
     config = defaultConfig;
 }
 
-describe('SplitModels', () => {
+describe('TSModels', () => {
     const allFiles = {};
 
     beforeAll(() => {
@@ -30,7 +30,7 @@ describe('SplitModels', () => {
         ];
 
         return new Promise((resolve, reject) => {
-            new SplitModels(config.protoFiles, clientConfig, (err, client) => {
+            new TSModels(config.protoFiles, clientConfig, (err, client) => {
                 if (err) {
                     const error = `Error loading proto files:\n${err}`;
                     console.error(error);
