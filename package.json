@@ -45,7 +45,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@spotify/web-scripts": "^8.0.2",
+    "@spotify/web-scripts": "^9.0.2",
     "@types/jest": "^26.0.8",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^4.3.0",

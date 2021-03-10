@@ -12,7 +12,7 @@ clientConfig.oneofs = true;
 clientConfig.rootLocation = config.rootLocation;
 clientConfig.async = true;
 
-new protoRequest.SplitModels(config.protoFiles, clientConfig, (err, client) => {
+new protoRequest.TSModels(config.protoFiles, clientConfig, (err, client) => {
   if (err) {
     console.error(`Error loading proto files:\n${err}`);
     return;
