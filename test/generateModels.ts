@@ -1,4 +1,4 @@
-const { config } = require('../test-dist/testconfig');
+const { config } = require('../test-dist/config');
 const { ClientConfig } = require('../dist/ClientConfig');
 const protoRequest = require('../dist').default;
 

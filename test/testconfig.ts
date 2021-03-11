@@ -9,7 +9,7 @@ testConfig.buildersOutputFile = "generated/compiledWithBuilders.js";
 testConfig.clientOutputDir = "generated/";
 testConfig.modelsOutputFile = "generated/models.js";
 testConfig.modelsOutputDir = "generated/";
-testConfig.rootLocation = "./proto/";
+testConfig.rootLocation = "./testproto/";
 testConfig.protoFiles = [
     'com/test/testservice.proto',
 ];

@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "start:debug": "node --inspect test-dist/index.js --runInBand",
-    "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**",
+    "copy:polyfills": "copyfiles src/**/polyfills/** -e \"**/polyfills/index.ts\" -s dist -u 1",
+    "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**,**/polyfills/*.d.ts; npm run copy:polyfills",
     "build:testclient": "rimraf test-dist/*; babel test -x '.ts' --source-maps --out-dir test-dist --ignore __mocks__,__tests__",
     "build:all": "npm run build; npm run build:testclient",
     "compilets": "node test-dist/generateDts.js",
@@ -66,6 +67,7 @@
     "@types/lodash": "^4.14.141",
     "@types/protobufjs": "^6.0.0",
     "babel-runtime": "^6.26.0",
+    "copyfiles": "^2.4.1",
     "espree": "^7.2.0",
     "fetch-headers": "^2.0.0",
     "global": "^4.4.0",

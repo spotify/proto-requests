@@ -85,7 +85,6 @@ export default class TSModels {
       throw new Error('Something went wrong, we found an unexpected nested node');
     }
     path = path.replace('$root', '');
-    debugger;
     const namespaceContent =
 `${depth === 0 ? '': '\n'}${gtd(depth)}export namespace ${node.name} {
 ${nestedNodes.map(nestedNode => generateAnnotatedNamespaces(options, nestedNode, `${path}.${node.name}`, depth + 1, nodeHandlers)).join('')}
@@ -142,7 +141,7 @@ ${depth === 0 ? '\n': ''}`;
       tsType = getFullName(this.root.lookupTypeOrEnum(node.type));
     }
     if (node.repeated) {
-      return `Array.<${tsType}>`;
+      return `Array<${tsType}>`;
     } else {
       return `${tsType}`;
     }
@@ -158,6 +157,11 @@ ${depth === 0 ? '\n': ''}`;
   };
 
   generateField = (node, parentNode, path, depth) => {
+    if (!node.name || node.name.includes('.')) {
+      // TODO: For some reason some weird fields are being added with dot namespaces. Possibly an issue with
+      // protobufjs?  Best move for now is to just drop them.
+      return '';
+    }
     return `${gtd(depth)}    ${node.name}: ${this.getNodeType(node)};`;
   };
 
