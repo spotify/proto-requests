@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" time="1.9">
-  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2020-09-18T15:36:57" time="1.334" tests="2">
-    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.005">
-    </testcase>
-    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0.001">
+<testsuites name="jest tests" tests="6" failures="0" time="1.114">
+  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:46" time="0.654" tests="1">
+    <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2020-09-18T15:36:57" time="1.362" tests="1">
-    <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.007">
+  <testsuite name="TSModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.134" tests="1">
+    <testcase classname="TSModels generated file snapshots" name="TSModels generated file snapshots" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.139" tests="2">
+    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.003">
+    </testcase>
+    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceTSClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.145" tests="2">
+    <testcase classname="HttpServiceTSClient testservice client snapshot" name="HttpServiceTSClient testservice client snapshot" time="0.003">
+    </testcase>
+    <testcase classname="HttpServiceTSClient testservice custom classes snapshot" name="HttpServiceTSClient testservice custom classes snapshot" time="0">
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TSModels generated file snapshots: generated/models/models.d.ts 1`] = `
+"export namespace com {
+
+    export namespace test {
+        export interface Model {
+            id: string;
+            name: string;
+            innerModel: com.test.Model.InnerModel;
+            unimportedModel: com.test.UnimportedModel;
+        }
+
+        export namespace Model {
+        
+            export interface InnerModel {
+                id: string;
+                count: number;
+                innerEnum: com.test.Model.InnerModel.InnerEnum;
+            }
+
+            export namespace InnerModel {
+            
+                export enum InnerEnum {
+                    SHOO = 'SHOO',
+                    SHWA = 'SHWA',
+                    SHWE = 'SHWE',
+                    SHIM = 'SHIM',
+                }
+
+            }
+
+
+        }
+
+        export interface Result {
+            id: string;
+            name: string;
+            status: com.test.Result.ResultStatus;
+        }
+
+        export namespace Result {
+        
+            export enum ResultStatus {
+                SUCCESS = 'SUCCESS',
+                FAILURE = 'FAILURE',
+                UNKNOWN = 'UNKNOWN',
+            }
+
+        }
+
+        export interface TestRequest {
+            id: string;
+            adAccountId: string;
+            thingy: com.test.TestRequest.InnerThingy;
+            floopy: com.test.TestRequest.FlooFlimFlam;
+        }
+
+        export namespace TestRequest {
+        
+            export enum FlooFlimFlam {
+                FLOO = 'FLOO',
+                FLIM = 'FLIM',
+                FLAM = 'FLAM',
+            }
+
+            export interface InnerThingy {
+                id: string;
+                name: string;
+            }
+
+            export namespace InnerThingy {
+            
+                export interface InnerInnerDoodly {
+                    id: string;
+                    fizzzlyy: string;
+                }
+
+                export namespace InnerInnerDoodly {
+                
+                    export enum WellDang {
+                        WELL = 'WELL',
+                        DANG = 'DANG',
+                    }
+
+                }
+
+
+                export enum OhHeck {
+                    OH = 'OH',
+                    HECK = 'HECK',
+                }
+
+            }
+
+
+        }
+
+        export interface UnimportedModel {
+            id: string;
+            something: string;
+            numberrr: number;
+        }
+
+    }
+
+}
+
+export namespace google {
+
+    export namespace protobuf {
+        export interface Empty {
+
+        }
+
+    }
+
+}
+
+"
+`;

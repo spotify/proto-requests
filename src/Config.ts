@@ -1,7 +1,7 @@
 export class Config {
     jsFile: string;
     tsFile: string;
-    libraryTarget: string;
+    libraryTarget: LibraryTarget;
     buildersOutputFile: string;
     clientOutputFile: string;
     modelsOutputFile: string;
@@ -11,6 +11,7 @@ export class Config {
     webgateBaseUrl: string;
     webgateVersion: string;
     rootLocation: string;
+    customImports: Array<CustomImport>;
 
     constructor() {
         this.jsFile = null;
@@ -25,5 +26,20 @@ export class Config {
         this.webgateBaseUrl = null;
         this.webgateVersion = null;
         this.rootLocation = null;
+        this.customImports = [];
     }
+}
+
+export enum LibraryTarget {
+    COMMONJS= 'commonjs',
+    COMMONJS2 = 'commonjs2',
+    MODULE = 'module',
+    ESMODULE = 'esModule',
+}
+
+export class CustomImport {
+    path: string;
+    defaultName: string;
+    importDefault: boolean;
+    namedImports: string[];
 }
