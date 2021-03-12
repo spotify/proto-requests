@@ -478,10 +478,10 @@ exports[`SplitModels generated file snapshots: generated/models//com/test/TestRe
 Object.defineProperty(exports, '__esModule', { value: true });
 var $root = {};
 var TestRequest = {};
-var InnerThingy = {};
 var FlooFlimFlam = {};
-var OhHeck = {};
+var InnerThingy = {};
 var InnerInnerDoodly = {};
+var OhHeck = {};
 var WellDang = {};
 
 $root.com = (function() {
@@ -628,6 +628,26 @@ $root.com = (function() {
             };
 
 
+            /**
+             * FlooFlimFlam enum.
+             * @name com.test.TestRequest.FlooFlimFlam
+             * @enum {string}
+
+             * @property {string} FLOO=FLOO FLOO value
+             * @property {string} FLIM=FLIM FLIM value
+             * @property {string} FLAM=FLAM FLAM value
+             */
+            TestRequest.FlooFlimFlam = (function() {
+                var values = {};
+
+                values[\\"FLOO\\"] = \\"FLOO\\";
+                values[\\"FLIM\\"] = \\"FLIM\\";
+                values[\\"FLAM\\"] = \\"FLAM\\";
+                return values;
+            })();
+            
+            FlooFlimFlam = TestRequest.FlooFlimFlam;
+
             TestRequest.InnerThingy = (function() {
                 /**
                  * Properties of a InnerThingy.
@@ -709,24 +729,6 @@ $root.com = (function() {
                     return JSON.parse(JSON.stringify(this));
                 };
 
-
-                /**
-                 * OhHeck enum.
-                 * @name com.test.TestRequest.InnerThingy.OhHeck
-                 * @enum {string}
-
-                 * @property {string} OH=OH OH value
-                 * @property {string} HECK=HECK HECK value
-                 */
-                InnerThingy.OhHeck = (function() {
-                    var values = {};
-
-                    values[\\"OH\\"] = \\"OH\\";
-                    values[\\"HECK\\"] = \\"HECK\\";
-                    return values;
-                })();
-                
-                OhHeck = InnerThingy.OhHeck;
 
                 InnerThingy.InnerInnerDoodly = (function() {
                     /**
@@ -831,30 +833,28 @@ $root.com = (function() {
                 })();
                 
                 InnerInnerDoodly = InnerThingy.InnerInnerDoodly;
+
+                /**
+                 * OhHeck enum.
+                 * @name com.test.TestRequest.InnerThingy.OhHeck
+                 * @enum {string}
+
+                 * @property {string} OH=OH OH value
+                 * @property {string} HECK=HECK HECK value
+                 */
+                InnerThingy.OhHeck = (function() {
+                    var values = {};
+
+                    values[\\"OH\\"] = \\"OH\\";
+                    values[\\"HECK\\"] = \\"HECK\\";
+                    return values;
+                })();
+                
+                OhHeck = InnerThingy.OhHeck;
                 return InnerThingy;
             })();
             
             InnerThingy = TestRequest.InnerThingy;
-
-            /**
-             * FlooFlimFlam enum.
-             * @name com.test.TestRequest.FlooFlimFlam
-             * @enum {string}
-
-             * @property {string} FLOO=FLOO FLOO value
-             * @property {string} FLIM=FLIM FLIM value
-             * @property {string} FLAM=FLAM FLAM value
-             */
-            TestRequest.FlooFlimFlam = (function() {
-                var values = {};
-
-                values[\\"FLOO\\"] = \\"FLOO\\";
-                values[\\"FLIM\\"] = \\"FLIM\\";
-                values[\\"FLAM\\"] = \\"FLAM\\";
-                return values;
-            })();
-            
-            FlooFlimFlam = TestRequest.FlooFlimFlam;
             return TestRequest;
         })();
         
@@ -867,10 +867,10 @@ $root.com = (function() {
 
 exports[\\"$root\\"] = $root;
 exports[\\"TestRequest\\"] = TestRequest;
-exports[\\"InnerThingy\\"] = InnerThingy;
 exports[\\"FlooFlimFlam\\"] = FlooFlimFlam;
-exports[\\"OhHeck\\"] = OhHeck;
+exports[\\"InnerThingy\\"] = InnerThingy;
 exports[\\"InnerInnerDoodly\\"] = InnerInnerDoodly;
+exports[\\"OhHeck\\"] = OhHeck;
 exports[\\"WellDang\\"] = WellDang;
 exports[\\"default\\"] = $root;
 "

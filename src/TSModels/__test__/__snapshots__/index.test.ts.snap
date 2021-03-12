@@ -58,6 +58,12 @@ exports[`TSModels generated file snapshots: generated/models/models.d.ts 1`] = `
 
         export namespace TestRequest {
         
+            export enum FlooFlimFlam {
+                FLOO = 'FLOO',
+                FLIM = 'FLIM',
+                FLAM = 'FLAM',
+            }
+
             export interface InnerThingy {
                 id: string;
                 name: string;
@@ -65,11 +71,6 @@ exports[`TSModels generated file snapshots: generated/models/models.d.ts 1`] = `
 
             export namespace InnerThingy {
             
-                export enum OhHeck {
-                    OH = 'OH',
-                    HECK = 'HECK',
-                }
-
                 export interface InnerInnerDoodly {
                     id: string;
                     fizzzlyy: string;
@@ -85,14 +86,13 @@ exports[`TSModels generated file snapshots: generated/models/models.d.ts 1`] = `
                 }
 
 
+                export enum OhHeck {
+                    OH = 'OH',
+                    HECK = 'HECK',
+                }
+
             }
 
-
-            export enum FlooFlimFlam {
-                FLOO = 'FLOO',
-                FLIM = 'FLIM',
-                FLAM = 'FLAM',
-            }
 
         }
 

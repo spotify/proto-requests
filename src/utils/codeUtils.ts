@@ -25,7 +25,7 @@ export const gtd = getTabsForDepth;
 export const getNestedNodes = (node) => {
     let nestedNodes = [];
     if (node.nested) {
-        const keys = Object.keys(node.nested);
+        const keys = Object.keys(node.nested).sort();
         nestedNodes = keys.map(key => node.nested[key]);
     }
     return nestedNodes;

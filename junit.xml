@@ -1,201 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="1" time="1.207">
-  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:21:13" time="0.681" tests="1">
+<testsuites name="jest tests" tests="6" failures="0" time="1.114">
+  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:46" time="0.654" tests="1">
     <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="HttpServiceTSClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:21:14" time="0.15" tests="2">
+  <testsuite name="TSModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.134" tests="1">
+    <testcase classname="TSModels generated file snapshots" name="TSModels generated file snapshots" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.139" tests="2">
+    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.003">
+    </testcase>
+    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceTSClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:35:47" time="0.145" tests="2">
     <testcase classname="HttpServiceTSClient testservice client snapshot" name="HttpServiceTSClient testservice client snapshot" time="0.003">
     </testcase>
     <testcase classname="HttpServiceTSClient testservice custom classes snapshot" name="HttpServiceTSClient testservice custom classes snapshot" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T18:21:14" time="0.141" tests="2">
-    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.003">
-    </testcase>
-    <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="TSModels" errors="0" failures="1" skipped="0" timestamp="2021-03-12T18:21:14" time="0.188" tests="1">
-    <testcase classname="TSModels generated file snapshots" name="TSModels generated file snapshots" time="0.042">
-      <failure>Error: expect(received).toMatchSnapshot(hint)
-
-Snapshot name: `TSModels generated file snapshots: generated/models/models.d.ts 1`
-
-- Snapshot  - 66
-+ Received  + 66
-
-@@ -1,96 +1,96 @@
-  export namespace com {
-
-      export namespace test {
--         export interface Model {
-+         export interface TestRequest {
-              id: string;
--             name: string;
-+             adAccountId: string;
--             innerModel: com.test.Model.InnerModel;
--             unimportedModel: com.test.UnimportedModel;
-+             thingy: com.test.TestRequest.InnerThingy;
-+             floopy: com.test.TestRequest.FlooFlimFlam;
-          }
-
--         export namespace Model {
-+         export namespace TestRequest {
-          
--             export interface InnerModel {
-+             export interface InnerThingy {
-                  id: string;
--                 count: number;
--                 innerEnum: com.test.Model.InnerModel.InnerEnum;
-+                 name: string;
-              }
-
--             export namespace InnerModel {
-+             export namespace InnerThingy {
-              
--                 export enum InnerEnum {
-+                 export enum OhHeck {
--                     SHOO = &apos;SHOO&apos;,
-+                     OH = &apos;OH&apos;,
--                     SHWA = &apos;SHWA&apos;,
-+                     HECK = &apos;HECK&apos;,
--                     SHWE = &apos;SHWE&apos;,
--                     SHIM = &apos;SHIM&apos;,
--                 }
--
--             }
--
-+                 }
-+
-+                 export interface InnerInnerDoodly {
-+                     id: string;
-+                     fizzzlyy: string;
-+                 }
-
--         }
--
--         export interface Result {
--             id: string;
--             name: string;
--             status: com.test.Result.ResultStatus;
--         }
--
--         export namespace Result {
--         
-+                 export namespace InnerInnerDoodly {
-+                 
-+                     export enum WellDang {
-+                         WELL = &apos;WELL&apos;,
-+                         DANG = &apos;DANG&apos;,
-+                     }
-+
-+                 }
-+
-+
-+             }
-+
-+
--             export enum ResultStatus {
-+             export enum FlooFlimFlam {
--                 SUCCESS = &apos;SUCCESS&apos;,
-+                 FLOO = &apos;FLOO&apos;,
--                 FAILURE = &apos;FAILURE&apos;,
-+                 FLIM = &apos;FLIM&apos;,
--                 UNKNOWN = &apos;UNKNOWN&apos;,
-+                 FLAM = &apos;FLAM&apos;,
-              }
-
-          }
-
--         export interface TestRequest {
-+         export interface Model {
-              id: string;
--             adAccountId: string;
-+             name: string;
--             thingy: com.test.TestRequest.InnerThingy;
--             floopy: com.test.TestRequest.FlooFlimFlam;
-+             innerModel: com.test.Model.InnerModel;
-+             unimportedModel: com.test.UnimportedModel;
-          }
-
--         export namespace TestRequest {
-+         export namespace Model {
-          
--             export interface InnerThingy {
-+             export interface InnerModel {
-                  id: string;
--                 name: string;
-+                 count: number;
-+                 innerEnum: com.test.Model.InnerModel.InnerEnum;
-              }
-
--             export namespace InnerThingy {
-+             export namespace InnerModel {
-              
--                 export enum OhHeck {
-+                 export enum InnerEnum {
--                     OH = &apos;OH&apos;,
-+                     SHOO = &apos;SHOO&apos;,
--                     HECK = &apos;HECK&apos;,
-+                     SHWA = &apos;SHWA&apos;,
--                 }
--
--                 export interface InnerInnerDoodly {
--                     id: string;
--                     fizzzlyy: string;
--                 }
-+                     SHWE = &apos;SHWE&apos;,
-+                     SHIM = &apos;SHIM&apos;,
-+                 }
-+
-+             }
-+
-
--                 export namespace InnerInnerDoodly {
--                 
--                     export enum WellDang {
--                         WELL = &apos;WELL&apos;,
--                         DANG = &apos;DANG&apos;,
--                     }
--
--                 }
--
--
--             }
--
--
-+         }
-+
-+         export interface Result {
-+             id: string;
-+             name: string;
-+             status: com.test.Result.ResultStatus;
-+         }
-+
-+         export namespace Result {
-+         
--             export enum FlooFlimFlam {
-+             export enum ResultStatus {
--                 FLOO = &apos;FLOO&apos;,
-+                 SUCCESS = &apos;SUCCESS&apos;,
--                 FLIM = &apos;FLIM&apos;,
-+                 FAILURE = &apos;FAILURE&apos;,
--                 FLAM = &apos;FLAM&apos;,
-+                 UNKNOWN = &apos;UNKNOWN&apos;,
-              }
-
-          }
-
-          export interface UnimportedModel {
-    at /Users/kgould/src/proto-requests/src/TSModels/__test__/index.test.ts:52:34
-    at Array.forEach (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/kgould/src/proto-requests/src/TSModels/__test__/index.test.ts:50:31)
-    at Object.asyncJestTest (/Users/kgould/src/proto-requests/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
-    at /Users/kgould/src/proto-requests/node_modules/jest-jasmine2/build/queueRunner.js:45:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/kgould/src/proto-requests/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
-    at /Users/kgould/src/proto-requests/node_modules/jest-jasmine2/build/queueRunner.js:75:41</failure>
     </testcase>
   </testsuite>
 </testsuites>
