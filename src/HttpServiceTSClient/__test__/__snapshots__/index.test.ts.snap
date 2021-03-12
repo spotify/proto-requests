@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HttpServiceTSClient testservice client snapshot 1`] = `
-"
+"import { com, google } from '../models/models';
 import { HttpServiceConfigOptions } from './protorequest/HttpServiceConfigOptions';
 
 export class TestService {
