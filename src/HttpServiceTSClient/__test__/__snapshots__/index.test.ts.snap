@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HttpServiceTSClient testservice client snapshot 1`] = `
+"
+import { HttpServiceConfigOptions } from './protorequest/HttpServiceConfigOptions';
+
+export class TestService {
+
+    fetchFn: (requestInfo: RequestInfo, options?: RequestInit) => Promise<Response>;
+    host: string;
+    baseUrl: string;
+    version: string;
+    headers: Headers;
+    
+    constructor(fetchFn, options: HttpServiceConfigOptions) {
+        this.fetchFn = fetchFn;
+        this.host = options.host;
+        this.baseUrl = options.baseUrl;
+        this.version = options.version || \\"\\";
+        this.headers = options.headers || new Headers();
+    }
+
+    /**
+     * Sends the fetch request decorated with the configured host.  Only for internal use.
+     */
+    protoFetch = (url: string, opts?: RequestInit): Promise<Response> => {
+      return this.fetchFn(this.host + url, opts);
+    };
+
+    /**
+     * Sets the headers to be sent with all requests to this service.
+     */
+    setHeaders = (headers: Headers): TestService => {
+      this.headers = headers;
+      return this;
+    };
+
+    /**
+     * Get the headers being sent with all requests to this service.
+     */
+    getHeaders = (): Headers => {
+      return this.headers;
+    };
+
+    doSomething = (request: google.protobuf.Empty): Promise<google.protobuf.Empty> => {
+        const url = '/' + this.baseUrl + '/TestService/' + this.version +  (this.version ? '/' : '') + 'doSomething';
+        const opts = {
+            method: 'POST',
+            body: JSON.stringify(request),
+            headers: this.headers
+        };
+        return this.protoFetch(url, opts)
+            .then(function(r) { return r.ok ? r.json() : Promise.reject(r); });
+    };
+
+    doSomethingElse = (request: com.test.Model): Promise<com.test.Result> => {
+        const url = '/' + this.baseUrl + '/TestService/' + this.version +  (this.version ? '/' : '') + 'doSomethingElse';
+        const opts = {
+            method: 'POST',
+            body: JSON.stringify(request),
+            headers: this.headers
+        };
+        return this.protoFetch(url, opts)
+            .then(function(r) { return r.ok ? r.json() : Promise.reject(r); });
+    };
+
+}
+"
+`;
+
+exports[`HttpServiceTSClient testservice custom classes snapshot: HttpServiceConfigOptions 1`] = `
+"export interface HttpServiceConfigOptions {
+  host: string;
+  baseUrl: string;
+  version: string;
+  headers: Headers;
+}
+"
+`;

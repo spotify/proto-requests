@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" time="2.114">
-  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2021-03-10T21:28:33" time="1.412" tests="2">
-    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.008">
+<testsuites name="jest tests" tests="6" failures="0" time="1.075">
+  <testsuite name="TSModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T17:40:29" time="0.635" tests="1">
+    <testcase classname="TSModels generated file snapshots" name="TSModels generated file snapshots" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceTSClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T17:40:29" time="0.131" tests="2">
+    <testcase classname="HttpServiceTSClient testservice client snapshot" name="HttpServiceTSClient testservice client snapshot" time="0.002">
+    </testcase>
+    <testcase classname="HttpServiceTSClient testservice custom classes snapshot" name="HttpServiceTSClient testservice custom classes snapshot" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2021-03-12T17:40:29" time="0.14" tests="1">
+    <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpServiceClient" errors="0" failures="0" skipped="0" timestamp="2021-03-12T17:40:30" time="0.13" tests="2">
+    <testcase classname="HttpServiceClient testservice client snapshot" name="HttpServiceClient testservice client snapshot" time="0.003">
     </testcase>
     <testcase classname="HttpServiceClient testservice custom classes snapshot" name="HttpServiceClient testservice custom classes snapshot" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="SplitModels" errors="0" failures="0" skipped="0" timestamp="2021-03-10T21:28:33" time="1.435" tests="1">
-    <testcase classname="SplitModels generated file snapshots" name="SplitModels generated file snapshots" time="0.007">
-    </testcase>
-  </testsuite>
-  <testsuite name="TSModels" errors="0" failures="0" skipped="0" timestamp="2021-03-10T21:28:33" time="1.439" tests="1">
-    <testcase classname="TSModels generated file snapshots" name="TSModels generated file snapshots" time="0.005">
     </testcase>
   </testsuite>
 </testsuites>

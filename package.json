@@ -9,7 +9,8 @@
   "scripts": {
     "start:debug": "node --inspect test-dist/index.js --runInBand",
     "copy:polyfills": "copyfiles src/**/polyfills/** -e \"**/polyfills/index.ts\" -s dist -u 1",
-    "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**,**/polyfills/*.d.ts; npm run copy:polyfills",
+    "copy:customclasses": "copyfiles src/**/customclasses/** -s dist -u 1",
+    "build": "rimraf dist/*; babel src -x '.ts,.js' --source-maps --out-dir dist --ignore **/__mocks__/**,**/__tests__/**,**/__test__/**,**/polyfills/*.d.ts,**/customclasses/**; npm run copy:polyfills; npm run copy:customclasses;",
     "build:testclient": "rimraf test-dist/*; babel test -x '.ts' --source-maps --out-dir test-dist --ignore __mocks__,__tests__",
     "build:all": "npm run build; npm run build:testclient",
     "compilets": "node test-dist/generateDts.js",
@@ -20,7 +21,9 @@
     "test:debug": "node --inspect-brk node_modules/.bin/jest --config ./jest.config.js --runInBand",
     "test:generate:models:debug": "node --inspect-brk=9229 test-dist/generateModels.js --runInBand",
     "test:generate:models": "npm run build:all; node test-dist/generateModels.js",
+    "test:generate:tsmodels": "npm run build:all; node test-dist/generateTSModels.js",
     "test:generate:client": "npm run build:all; node test-dist/generateHttpServiceClient.js",
+    "test:generate:tsclient": "npm run build:all; node test-dist/generateHttpServiceTSClient.js",
     "release": "web-scripts release",
     "commit": "web-scripts commit"
   },

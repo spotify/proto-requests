@@ -1,15 +1,18 @@
-const { Config: Testconfig } = require("../dist/Config");
+const { Config } = require("../dist/Config");
 
-const testConfig = new Testconfig();
+const testConfig = new Config();
 
 testConfig.jsFile = "generated/compiled.js";
 testConfig.tsFile = "generated/compiled.d.ts";
 testConfig.libraryTarget = "esModule";
 testConfig.buildersOutputFile = "generated/compiledWithBuilders.js";
-testConfig.clientOutputDir = "generated/";
-testConfig.modelsOutputFile = "generated/models.js";
-testConfig.modelsOutputDir = "generated/";
-testConfig.rootLocation = "./testproto/";
+testConfig.clientOutputDir = "generated/clients/";
+testConfig.modelsOutputFile = "generated/models/models.js";
+testConfig.modelsOutputDir = "generated/models/";
+testConfig.customImports = [
+    { defaultName: '', namedImports: [ 'com', 'google' ], importDefault: false, path: '../models/models' }
+];
+testConfig.rootLocation = "./proto/";
 testConfig.protoFiles = [
     'com/test/testservice.proto',
 ];
